@@ -9,6 +9,8 @@ export const useAuth = () => {
 export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
+  const value = {};
+
   return (
     <AuthContext.Provider value={value}>
       {!loading && children}
