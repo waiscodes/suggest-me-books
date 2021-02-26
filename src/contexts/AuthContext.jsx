@@ -12,6 +12,7 @@ export const AuthProvider = ({ children }) => {
   const [userInfo, setUserInfo] = useState();
   const [loading, setLoading] = useState(true);
 
+  // Account
   const register = (name, email, username, password) => {
     auth.createUserWithEmailAndPassword(email, password).then((cred) => {
       return db.collection("users").doc(cred.user.uid).set({
